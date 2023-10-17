@@ -1,10 +1,7 @@
 
-const URL = 'http://localhost:8081/posts';
+export const URL = 'http://localhost:8081/posts';
 
-const apiGetPosts = async () => {
+export const apiGetPosts = async () => {
     const response = await fetch(URL);
-    const jsonData = await response.json();
-    return jsonData;
+    return await response.json();
 };
-
-export default apiGetPosts;

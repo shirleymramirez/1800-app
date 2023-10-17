@@ -11,7 +11,7 @@ const Post = ({ id, title, body }) => {
   }
 
   return (
-    <Card style={{ width: '20rem', marginTop: 20, marginLeft: 10 }}>
+    <Card id="cardStyle">
       {toggleEdit ? 
         <EditPost 
           id={id}

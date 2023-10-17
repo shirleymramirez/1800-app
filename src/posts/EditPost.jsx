@@ -18,7 +18,6 @@ const EditPost = ({ id, title, body, onSave }) => {
   }
 
   const handleSave = () => {
-    // save to redux-saga store
     dispatch(editPost({title: newtitle, body: newbody, id}));
     onSave()
   }
@@ -27,7 +26,9 @@ const EditPost = ({ id, title, body, onSave }) => {
   return (
     <Form>
         <Form.Control 
-            size="sm" 
+            as="textarea" 
+            rows={2}
+            size="md" 
             type="text" 
             value={newtitle} 
             onChange={handleTitleChange}

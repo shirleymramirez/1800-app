@@ -25,13 +25,11 @@ const ViewPosts = ({ id, title, body, onEdit }) => {
   return (
     <>
         <Card.Body>
-            <blockquote className="blockquote mb-0">
-                <p>{` ${title} `}</p>
-                <footer className="blockquote-footer">{body}</footer>
-            </blockquote>
-            <div style={{display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+            <p className='truncatedTitle'>{` ${title} `}</p>
+            <footer className="blockquote-footer">{body}</footer>
+            <div className="d-flex justify-content-end" style={{marginTop: '10px' }}>
                 <Button variant="primary" onClick={onEdit} style={{marginRight: '5px'}}>Edit</Button>
-                <Button variant="primary" onClick={handleDelete}>Delete</Button>
+                <Button variant="danger" onClick={handleDelete}>Delete</Button>
             </div>
         </Card.Body>
         { showModal ?

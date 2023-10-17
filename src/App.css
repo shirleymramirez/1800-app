@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+#searchField {
+  display: flex; 
+  justify-content: center; 
+  margin: auto; 
+  width: 50rem;
+}
+
+#cardStyle {
+  width: 20rem; 
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.truncatedTitle {
+  height: 3rem;
+  padding-bottom: 1rem;
+}
+
+.blockquote-footer {
+  margin-top: 1rem !important;
+  min-height: 8rem;
+}
+
+textarea.form-control {
+  font-size: .875em;
+  color: #6c757d;
+}

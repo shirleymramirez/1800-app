@@ -19,12 +19,13 @@ const Posts = () => {
 
   return (
     <div style={{ padding: 50 }}>
-      <Form.Control style={{ display: 'flex', justifyContent: 'center', margin: 'auto', width: '50rem'}}
+      <Form.Control 
+        id="searchField"
         type="text" 
-        placeholder="Search..." 
+        placeholder="Search title..." 
         onChange={searchItems}
       />
-      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
+      <div className="d-flex flex-row flex-wrap justify-content-center" >
         { postIds.filter((postId) => {
             return posts[postId].title.toLowerCase().includes(searchText.toLowerCase());
           }).map((postId) => {
