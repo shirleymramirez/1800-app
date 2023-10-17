@@ -6,6 +6,7 @@ import postsSaga from '../sagas/postsSagas'
 // create the saga middleware
 const sagaMiddleware = createSagaMiddleware()
 
+// Mount it on the Store
 export default configureStore({
   reducer: {
     posts: postsReducer,
